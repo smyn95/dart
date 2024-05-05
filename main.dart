@@ -1,8 +1,10 @@
-String sayHello(String name, int age, [String? country = 'korea']) {
-  return "${name} / ${age} / ${country}";
+typedef ListOfInts = List;
+
+ListOfInts reverseListOfNumbers(ListOfInts list) {
+  var reversedList = list.reversed.toList();
+  return reversedList;
 }
 
 void main() {
-  var results = sayHello("sugar", 28);
-  print(results);
+  print(reverseListOfNumbers([1, 2, 3]));
 }
