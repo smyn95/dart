@@ -1,10 +1,17 @@
-typedef ListOfInts = List;
+class Player {
+  final String name;
+  int xp;
 
-ListOfInts reverseListOfNumbers(ListOfInts list) {
-  var reversedList = list.reversed.toList();
-  return reversedList;
+  Player(this.name, this.xp);
+
+  void sayHello() {
+    print('Hello $name');
+  }
 }
 
 void main() {
-  print(reverseListOfNumbers([1, 2, 3]));
+  var player = Player('smyn', 1500);
+  player.sayHello();
+  var player2 = Player('lynn', 2500);
+  player2.sayHello();
 }
