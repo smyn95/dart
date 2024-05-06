@@ -1,8 +1,15 @@
 class Player {
   final String name;
   int xp;
+  String team;
+  int age;
 
-  Player(this.name, this.xp);
+  Player({
+    required this.name,
+    required this.xp,
+    required this.team,
+    required this.age,
+  });
 
   void sayHello() {
     print('Hello $name');
@@ -10,8 +17,18 @@ class Player {
 }
 
 void main() {
-  var player = Player('smyn', 1500);
+  var player = Player(
+    name: 'john',
+    xp: 1000,
+    team: 'red',
+    age: 12,
+  );
   player.sayHello();
-  var player2 = Player('lynn', 2500);
+  var player2 = Player(
+    name: 'doe',
+    xp: 2000,
+    team: 'blue',
+    age: 15,
+  );
   player2.sayHello();
 }
